@@ -53,3 +53,9 @@ The directory structure of the project looks like this:
 Created using [mlops_template](https://github.com/SkafteNicki/mlops_template),
 a [cookiecutter template](https://github.com/cookiecutter/cookiecutter) for getting
 started with Machine Learning Operations (MLOps).
+
+
+To run a script, e.g. the `model.py` script, run the following command:
+```
+uv run src/cc_project/model.py
+```

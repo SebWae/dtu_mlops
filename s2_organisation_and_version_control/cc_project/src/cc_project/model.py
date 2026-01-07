@@ -1,3 +1,4 @@
+
 import torch
 from torch import nn
 
@@ -24,6 +25,10 @@ class MyAwesomeModel(nn.Module):
         x = torch.flatten(x, 1)
         x = self.dropout(x)
         return self.fc1(x)
+
+
+def MYFUnc(x):
+    return "   test"
 
 
 if __name__ == "__main__":

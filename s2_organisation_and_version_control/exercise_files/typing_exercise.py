@@ -12,7 +12,7 @@ class Network(nn.Module):
 
     """
 
-    def __init__(self, input_size, output_size, hidden_layers, drop_p=0.5) -> None:
+    def __init__(self, input_size: int, output_size: int, hidden_layers, drop_p=0.5) -> None:
         super().__init__()
         # Input to a hidden layer
         self.hidden_layers = nn.ModuleList([nn.Linear(input_size, hidden_layers[0])])
