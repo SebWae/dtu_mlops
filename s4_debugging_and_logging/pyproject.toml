@@ -7,13 +7,18 @@ classifiers = [
   "Development Status :: 3 - Alpha",
   "Programming Language :: Python :: 3",
 ]
+
+[project]
+name = "debugging_and_logging"
+version = "0.1.0"
+requires-python = ">=3.10,<3.13"
+
 readme = "README.md"
-requires-python = ">=3.12"
 dependencies = [
     "fastapi==0.115.6",
     "hydra-core>=1.3.2",
     "matplotlib>=3.10.8",
-    "torch==2.6.0",
+    "torch>=2.9.1,<3.0",
     "torchvision>=0.21.0",
     "typer==0.15.1",
     "uvicorn==0.34.0",
@@ -32,6 +37,9 @@ dev = [
     "mypy>=1.19.1",
     "hydra-core>=1.3.2",
     "torch>=2.9.1",
+    "snakeviz>=2.2.2",
+    "torch-tb-profiler>=0.4.3",
+    "tensorboard>=2.20.0",
 ]
 
 [tool.uv.sources]
@@ -55,3 +63,9 @@ select = ["E", "F", "N", "I"]
 
 [tool.coverage.run]
 omit = ["tests/*"]
+
+[tool.uv]
+package = false
+required-environments = [
+  "sys_platform == 'linux' and platform_machine == 'x86_64'"
+]
